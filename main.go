@@ -22,20 +22,20 @@ func main() {
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:    "api",
-				Usage:   "Multiaddress of Lotus node.",
-				EnvVars: []string{"LOTUS_CPR_API"},
+				Usage:   "Address of Lotus miner node.",
+				EnvVars: []string{"LOTUS_API"},
 				Value:   "127.0.0.1:2345",
 			},
 			&cli.StringFlag{
 				Name:     "api-token",
-				Usage:    "Read only API token for Lotus node.",
-				EnvVars:  []string{"LOTUS_CPR_API_TOKEN"},
+				Usage:    "Token for lotus miner node..",
+				EnvVars:  []string{"LOTUS_API_TOKEN"},
 				Required: true,
 			},
 			&cli.StringFlag{
 				Name:    "listen",
 				Usage:   "Address to start the jsonrpc server on.",
-				EnvVars: []string{"LOTUS_CPR_LISTEN"},
+				EnvVars: []string{"LOTUS_PROXY_LISTEN"},
 				Value:   ":33111",
 			},
 		},
